@@ -26,22 +26,22 @@ class Register extends React.Component {
 
         return (
             <form onSubmit={handleSubmit(this.onSubmit.bind(this))} className={styles.authForm}>
-                <h2>Register</h2>
+                <h2>Cadastro</h2>
                 <Field
                     name="username"
                     type="text"
                     component={renderField}
-                    placeholder="Username"
+                    placeholder="Usuario"
                     validate={this.required}
                 />
                 <Field
                     name="password"
                     type="password"
                     component={renderField}
-                    placeholder="Password"
+                    placeholder="Senha"
                     validate={this.required}
                 />
-                <button type="submit" className="btn btn--primary">Register</button>
+                <button type="submit" className="btn btn--primary">Cadastro</button>
                 <Link to="/login" className="btn btn--default">Login</Link>
                 <button className="btn btn--facebook" onClick={this.props.facebookLogin}>Facebook login</button>
             </form>

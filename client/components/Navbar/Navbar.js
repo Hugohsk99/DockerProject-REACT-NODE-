@@ -63,7 +63,7 @@ class Navbar extends React.Component {
         return (
             <nav className={styles.navbarWrapper}>
                 <div className={classNames('container', styles.containerWrapper)}>
-                    <span className={styles.appName}>Blackford</span>
+                    <span className={styles.appName}>APPDOCKER</span>
                     <div className={styles.navbarActions}>
                         {this.props.isAuthorized ?
                             this.renderDropdown()

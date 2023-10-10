@@ -11,6 +11,6 @@ module.exports = {
     },
     test: {
         client: 'postgres',
-        connection: 'postgres://localhost/test_blackford',
+        connection: 'postgres://localhost/test_APPDOCKER',
     },
 };

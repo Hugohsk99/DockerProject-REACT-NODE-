@@ -32,18 +32,18 @@ class Login extends React.Component {
                         name="username"
                         type="text"
                         component={renderField}
-                        placeholder="Username"
+                        placeholder="Usuario"
                         validate={this.required}
                     />
                     <Field
                         name="password"
                         type="password"
                         component={renderField}
-                        placeholder="Password"
+                        placeholder="Senha"
                         validate={this.required}
                     />
                     <button type="submit" className="btn btn--primary">Login</button>
-                    <Link to="/register" className="btn btn--default">Register</Link>
+                    <Link to="/register" className="btn btn--default">Cadastro</Link>
                 </form>
                 <button className="btn btn--facebook" onClick={this.props.facebookLogin}>Facebook login</button>
             </div>
