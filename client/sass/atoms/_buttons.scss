@@ -1,0 +1,74 @@
+button {
+    background: none;
+    border: 0;
+    color: $color-white;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    height: 42px;
+
+    margin-top: 16px;
+    padding: 8px;
+
+    border-radius: 50px;
+    box-shadow: $box-shadow;
+    color: $color-white;
+    transition: all 300ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $color-white;
+        outline: 0;
+    }
+
+    &:active {
+        box-shadow: inherit;
+    }
+
+    &--primary {
+        background: $color-black;
+        margin-right: 16px;
+
+        &:active {
+            background-image: $color-black;
+        }
+    }
+
+    &--primary,
+    &--default {
+        display: inline-block;
+        width: 47%;
+    }
+
+    &--default {
+        background: transparent;
+        border: 1px solid $color-black;
+        box-shadow: unset;
+        color: $color-black;
+        line-height: 40px;
+        text-align: center;
+        padding: 0;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+
+    &--facebook {
+        background: $color-facebook;
+
+        &:active {
+            background: $color-facebook;
+        }
+    }
+}

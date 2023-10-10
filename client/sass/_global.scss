@@ -1,0 +1,51 @@
+body,
+button,
+input {
+    font-family: "Circular Air" !important;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: $color-black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Playfair Display" !important;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+input:focus {
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+    padding: 0;
+}

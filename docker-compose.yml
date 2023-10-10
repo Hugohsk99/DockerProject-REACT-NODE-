@@ -1,0 +1,38 @@
+version: "2"
+services:
+  node:
+    build: .
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
+    links:
+      - postgres
+    depends_on:
+      - postgres
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://test:test@172.27.0.2:5432/base_teste
+      - TOKEN_SECRET=sua_chave_secreta
+      - CLIENT_ID=
+      - FACEBOOK_APP_ID=
+    command: ["./wait-for-it.sh", "postgres:5432", "--", "npm", "run", "docker-dev"]
+  postgres:
+    image: postgres
+    ports:
+      - "5436:5432"
+    volumes:
+      - .data-postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=base_teste
+    restart: always
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+  default:
+    external:
+      name: dockerproject-react-node-_default
