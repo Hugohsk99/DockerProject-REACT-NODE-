@@ -1,5 +1,5 @@
 const app = require('./server.js');
-const debug = require('debug')('APPDOCKER:server');
+const debug = require('debug')('app_docker:server');
 const http = require('http');
 
 // Get port from environment and store in Express

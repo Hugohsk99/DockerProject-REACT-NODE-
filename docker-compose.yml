@@ -13,26 +13,24 @@ services:
       - postgres
     environment:
       - NODE_ENV=development
-      - DATABASE_URL=postgres://test:test@172.27.0.2:5432/base_teste
-      - TOKEN_SECRET=sua_chave_secreta
-      - CLIENT_ID=
-      - FACEBOOK_APP_ID=
+      - DATABASE_URL=postgres://test:test@postgres:5434/app_docker
+      - TOKEN_SECRET=3ed2913ecaf9b6f90c7abe2024567d73
+      - CLIENT_ID=232697356464615
+      - FACEBOOK_APP_ID=232697356464615
     command: ["./wait-for-it.sh", "postgres:5432", "--", "npm", "run", "docker-dev"]
   postgres:
     image: postgres
     ports:
-      - "5436:5432"
+      - "5434:5432"
     volumes:
       - .data-postgres:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=test
-      - POSTGRES_PASSWORD=test
-      - POSTGRES_DB=base_teste
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: app_docker
     restart: always
+
     networks:
       - mynetwork
 networks:
   mynetwork:
-  default:
-    external:
-      name: dockerproject-react-node-_default

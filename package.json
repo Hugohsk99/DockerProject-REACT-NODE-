@@ -1,5 +1,5 @@
 {
-  "name": "APPDOCKER",
+  "name": "app_docker",
   "version": "1.0.0",
   "description": "",
   "main": "./server/init.js",
@@ -14,8 +14,8 @@
     "prod": "concurrently \"npm run build\" \"npm run migrate\" \"npm run start\"",
     "migrate": "knex migrate:latest",
     "lint": "eslint client/ --ext .js --ext .jsx && eslint server/ --ext .js",
-    "test": "(dropdb test_APPDOCKER --if-exists && createdb test_APPDOCKER) && NODE_ENV=test jest --forceExit",
-    "watch": "(dropdb test_APPDOCKER --if-exists && createdb test_APPDOCKER) && NODE_ENV=test jest --watch *.js",
+    "test": "(dropdb test_app_docker --if-exists && createdb test_app_docker) && NODE_ENV=test jest --forceExit",
+    "watch": "(dropdb test_app_docker --if-exists && createdb test_app_docker) && NODE_ENV=test jest --watch *.js",
     "cover": "istanbul cover npm run test --no-default-excludes",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },

@@ -63,3 +63,4 @@ export default reduxForm({
     validate,
     form: 'RegisterForm',
 })(connect(null, { createUser, facebookLogin })(Register));
+

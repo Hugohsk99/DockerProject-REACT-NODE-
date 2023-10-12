@@ -13,7 +13,7 @@ services:
       - db
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=postgres://test:test@db:5432/APPDOCKER
+      - DATABASE_URL=postgres://test:test@db:5432/app_docker
       - TOKEN_SECRET=<JWT_KEY>
       - CLIENT_SECRET=<CLIENT_SECRET>
       - CLIENT_ID=<CLIENT_ID>
@@ -28,7 +28,7 @@ services:
     environment:
       - POSTGRES_USER=test
       - POSTGRES_PASSWORD=test
-      - POSTGRES_DB=APPDOCKER
+      - POSTGRES_DB=app_docker
     restart: always
   nginx:
     restart: always
